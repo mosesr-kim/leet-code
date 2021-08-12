@@ -1,1 +1,4 @@
-# My solutions for LeetCode algorithms! 
+# leet-code
+
+
+My solutions for LeetCode algorithms!
