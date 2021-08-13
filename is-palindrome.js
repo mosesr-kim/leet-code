@@ -27,3 +27,19 @@ Constraints:
 
 -231 <= x <= 231 - 1
 */
+
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function (x) {
+  if (x < 0) return false;
+  const str = x.toString();
+  const mid = Math.floor(str.length / 2);
+  for (let i = 0; i < mid; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+};
