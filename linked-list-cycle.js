@@ -36,3 +36,14 @@ pos is - 1 or a valid index in the linked - list.
 
 Follow up: Can you solve it using O(1)(i.e.constant) memory ?
 */
+
+var hasCycle = function (head) {
+  let fast = head;
+  let slow = head;
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next;
+    fast = fast.next.next;
+    if (slow === fast) return true;
+  }
+  return false;
+};
