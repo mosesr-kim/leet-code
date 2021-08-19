@@ -24,3 +24,20 @@ Constraints:
 The number of nodes in the list is in the range [1, 100].
 1 <= Node.val <= 100
 */
+
+var middleNode = function (head) {
+  let currentHead = head;
+  let middle = head;
+  let update = true;
+  while (currentHead.next) {
+    if (update) {
+      currentHead = currentHead.next;
+      middle = middle.next;
+      update = false;
+    } else {
+      currentHead = currentHead.next;
+      update = true;
+    }
+  }
+  return middle;
+};
