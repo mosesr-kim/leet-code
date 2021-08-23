@@ -19,3 +19,10 @@ Constraints:
 
 The given address is a valid IPv4 address.
 */
+/**
+ * @param {string} address
+ * @return {string}
+ */
+var defangIPaddr = function (address) {
+  return address.split('.').join('[.]');
+};
