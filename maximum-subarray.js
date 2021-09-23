@@ -25,3 +25,20 @@ Constraints:
 1 <= nums.length <= 105
 -104 <= nums[i] <= 104
 */
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function (nums) {
+  if (nums.length === 1) return nums[0];
+  let sum = 0;
+  let largestSum = 0;
+  for (let i = 0; i < nums.length; i++) {
+    sum = 0;
+    for (let j = i; j < nums.length; j++) {
+      sum = sum + nums[j];
+      if (sum > largestSum) largestSum = sum;
+    }
+  }
+  return largestSum;
+};
